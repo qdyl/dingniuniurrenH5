@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<header class="has-topbar header">
+    <i class="back" onclick="history.go(-1);"></i>
+    <div class="search-box fr mr10" style="margin-top: .4rem;">
+        <input type="text" placeholder="请输入股票代码/名称/拼音" class="search fl">
+        <i class="closes" style="display: none;"></i>
+        <ul class="search-list">
+            <li><a href="">泰永长征(002927)</a></li>
+            <li><a href="">泰永长征(002927)</a></li>
+            <li><a href="">泰永长征(002927)</a></li>
+            <li><a href="">泰永长征(002927)</a></li>
+            <li><a href="">泰永长征(002927)</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</header>
+<div class="h44 mb8"></div>
+
+<section class="bg-fff mb8">
+    <div class="pad-lr10 over bor-bot"><i class="line fl mr8"></i><span class="wz fl">搜索历史</span><span class="btn fr null">清空</span></div>
+    <div class="pad-lr10">
+        <table cellpadding="0" cellspacing="0" width="100%" class="search-table" border="none">
+            <tr>
+                <td>东阿阿胶 <span class="ml10 col-999999">000423</span></td>
+                <td class="col-FF0000">10.14</td>
+                <td class="col-FF0000">+0.18%</td>
+                <td style="text-align: center;"><i class="option mr10"></i><i class="close" style="display: inline-block;vertical-align: middle;"></i></td>
+            </tr>
+            <tr>
+                <td>东阿阿胶 <span class="ml10 col-999999">000423</span></td>
+                <td class="col-31C230">10.14</td>
+                <td class="col-31C230">-0.18%</td>
+                <td style="text-align: center;"><i class="option mr10"></i><i class="close" style="display: inline-block;vertical-align: middle;"></i></td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section class="bg-fff mb8">
+    <div class="pad-lr10 over bor-bot"><i class="line fl mr8"></i><span class="wz fl">热门推荐</span></div>
+    <ul class="kind over kinds pad10">
+        <li>
+            <a href="">
+                <ol>
+                    <li class="kind-name mb6">新和成<br><span>002001</span></li>
+                    <li class="kind-num col-31C230">3110.07</li>
+                    <li class="kind-rate col-31C230"><span class="mr10">-4.14</span><span>-0.15%</span></li>
+                </ol>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <ol>
+                    <li class="kind-name mb6">卫信康<br><span>002001</span></li>
+                    <li class="kind-num col-FD3B30">3110.07</li>
+                    <li class="kind-rate col-FD3B30"><span class="mr10">+4.14</span><span>+0.15%</span></li>
+                </ol>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <ol>
+                    <li class="kind-name mb6">中科新材<br><span>002001</span></li>
+                    <li class="kind-num col-FD3B30">3110.07</li>
+                    <li class="kind-rate col-FD3B30"><span class="mr10">+4.14</span><span>+0.15%</span></li>
+                </ol>
+            </a>
+        </li>
+    </ul>
+</section>
+<div class="h100"></div>
+<ul class="footer over bg-fff">
+    <li><a href="index.html" class="index-hui">首页</a></li>
+    <li><a href="自选.html" class="option-hui">自选</a></li>
+    <li><a href="策略.html" class="hover ce-hui">策略</a></li>
+    <li><a href="牛股.html" class="niu-hui">牛股</a></li>
+    <li><a href="个人中心.html" class="per-hui">个人中心</a></li>
+</ul>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    //搜索股票
+    $('.search').keyup(function(){
+        $('.search-list').show();
+        $('.closes').show();
+        if($(this).val()==''){
+            $('.search-list').hide();
+            $('.closes').hide();
+        }
+    });
+    $('.closes').click(function(){
+        $('.search').val('');
+        if($('.search').val()==''){
+            $(this).hide();
+            $('.search-list').hide();
+        }
+    });
+    //清空
+    $('.null').click(function(){
+        $('.search-table').remove();
+    });
+    //删除
+    $('.search-table tr').on('click','.close',function(){
+        $(this).parent().parent().remove();
+    });
+</script>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<header class="has-topbar header">
+    <i class="back" onclick="history.go(-1);"></i>模拟点买
+</header>
+<div class="h44"></div>
+<ul class="ce-list mb8 bg-fff">
+    <li><span class="ce-l">股票名称/代码:</span><i class="link"></i><span class="ce-r">平安银行 <i class="col-949499">000001</i></span></li>
+    <li><span class="ce-l">策略委托价:</span><input type="text" placeholder="请输入委托价格" class="ce-r"></li>
+    <li><span class="ce-l">市价:</span><span class="ce-r">690.00</span></li>
+    <li>
+        <div class="over">
+            <span class="ce-l">选择信用金:</span><input type="text" placeholder="请输入信用金" class="ce-r xin-money">
+        </div>
+        <ol class="money-list over">
+            <li class="hover">2500</li>
+            <li>4000</li>
+            <li>8000</li>
+            <li>10000</li>
+            <li>20000</li>
+            <li>30000</li>
+            <li>40000</li>
+            <li>50000</li>
+        </ol>
+    </li>
+    <li style="padding: 1.3rem 1rem;">
+        <div class="fl over ce-pei">
+            <span class="fl ce-l">策略匹配:</span>
+            <ul class="over fl bei">
+                <li class="hover">10倍</li>
+                <li>8倍</li>
+                <li>5倍</li>
+            </ul>
+        </div>
+        <div class="fr gu">
+            <p class="gu-shu">16600股</p>
+            <p class="gu-money">市值99932.00元</p>
+        </div>
+    </li>
+    <li><span class="ce-l">止盈:</span><input type="text" placeholder="请输入止盈线" class="ce-r"></li>
+    <li><span class="ce-l">止损:</span><input type="text" placeholder="请输入止损线" class="ce-r"></li>
+    <li class="jian-fei"><span class="ce-l">建仓费:</span><i class="link"></i><span class="ce-r" style="color: #FD3B30;">40</span></li>
+    <li>
+        <div class="over di-fei">
+            <span class="ce-l">递延费:</span><i class="link"></i><span class="ce-r">10元/天/万元</span>
+        </div>
+        <div class="over zi-di">
+            <span class="fl">自动递延:</span><i class="fr"></i>
+        </div>
+    </li>
+</ul>
+<div class="bg-fff" style="padding: .7rem 1rem 3.3rem 1rem;">
+    <input type="checkbox" id="check" class="check"><label for="check">我已阅读并签署<a href="" style="color: #0377CC;">《合作协议》</a></label>
+    <p class="all-pay">共应支付：<span>1018元</span></p>
+    <p class="yue">余额：0.00元</p>
+    <input type="button" value="立即创建" class="cz-btn" style="background: #FF0000;">
+</div>
+<p class="ceng"></p>
+<!--//建仓说明-->
+<div class="cang-alert center bg-fff center cang-alert1">
+    <div class="cang-top">
+        <div class="over bor-bot cang-name" style="text-align: center;">
+            建仓说明
+        </div>
+        <div class="content">
+            <p>内容待定，内容待定，内容待定，内容待定，内容待定，内容待定，</p>
+        </div>
+        <div class="login-wrap"><input type="button" value="关闭" class="login-btn close-cang"></div>
+    </div>
+</div>
+<!--//递延费说明-->
+<div class="cang-alert center bg-fff center cang-alert2">
+    <div class="cang-top">
+        <div class="over bor-bot cang-name" style="text-align: center;">
+            递延费说明
+        </div>
+        <div class="content">
+            <p>内容待定，内容待定，内容待定，内容待定，内容待定，内容待定，</p>
+        </div>
+        <div class="login-wrap"><input type="button" value="关闭" class="login-btn close-cang"></div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    //选择信用金
+    $(function(){
+        $('.xin-money').val($('.money-list li.hover').text());
+    });
+    $('.money-list li').click(function(){
+        $(this).addClass('hover').siblings('li').removeClass('hover');
+        $('.xin-money').val($(this).text());
+    });
+    //策略匹配
+    $('.bei li').click(function(){
+        $(this).addClass('hover').siblings('li').removeClass('hover');
+    });
+    //自动递延
+    $('.zi-di i').click(function(){
+        $(this).toggleClass('hover');
+    });
+    //建仓说明
+    $('.jian-fei').click(function(){
+        $('.ceng').show();
+        $('.cang-alert1').show();
+    });
+    //递延费说明
+    $('.di-fei').click(function(){
+        $('.ceng').show();
+        $('.cang-alert2').show();
+    });
+    $('.close-cang').click(function(){
+        $('.ceng').hide();
+        $('.cang-alert1').hide();
+        $('.cang-alert2').hide();
+    });
+</script>
+</html>

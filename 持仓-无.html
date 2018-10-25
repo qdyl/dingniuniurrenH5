@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<header class="has-topbar header">
+    <div class="tabs over"><a href="">策略</a><a href="" class="hover">持仓</a></div>
+</header>
+<div class="h44"></div>
+<section class="cang">
+    <p class="jin-text mb6">净资产</p>
+    <p class="jin-num mb24">￥0.00</p>
+    <ul class="cang-list over">
+        <li>
+            <p class="cang-title">可用资金</p>
+            <p class="cang-num">￥0.00</p>
+        </li>
+        <li>
+            <p class="cang-title">持仓市值</p>
+            <p class="cang-num">￥0.00</p>
+        </li>
+        <li>
+            <p class="cang-title">浮动盈亏</p>
+            <p class="cang-num">￥0.00</p>
+        </li>
+    </ul>
+</section>
+<section class="bg-fff" style="padding-bottom: 11rem;">
+    <ul class="cang-tab over bor-bot">
+        <li class="hover"><span>当前持仓</span><i></i></li>
+        <li><span>当前委托</span><i></i></li>
+        <li><span>历史交易</span><i></i></li>
+    </ul>
+    <div class="no-record">
+        <div class="active" style="padding: 11rem;">
+            <div class="no" style="margin-top:0;"><img src="images/t.png" alt=""></div>
+            <p class="no-news">没有记录！</p>
+        </div>
+        <div>
+            <div class="no" style="padding: 11rem;"><img src="images/t.png" alt=""></div>
+            <p class="no-news">没有记录！</p>
+        </div>
+        <div>
+            <div class="no" style="padding: 11rem;"><img src="images/t.png" alt=""></div>
+            <p class="no-news">没有记录！</p>
+        </div>
+    </div>
+</section>
+<input type="button" value="创建策略" class="create-btn">
+<div class="h100"></div>
+<ul class="footer over bg-fff">
+    <li><a href="index.html" class="index-hui">首页</a></li>
+    <li><a href="自选.html" class="option-hui">自选</a></li>
+    <li><a href="策略.html" class="hover ce-hui">策略</a></li>
+    <li><a href="牛股.html" class="niu-hui">牛股</a></li>
+    <li><a href="个人中心.html" class="per-hui">个人中心</a></li>
+</ul>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.cang-tab li').click(function(){
+        $(this).addClass('hover').siblings('li').removeClass('hover');
+        $('.no-record>div').eq($(this).index()).addClass('active').siblings('div').removeClass('active');
+    });
+</script>
+</html>

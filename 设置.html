@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body class="bg-fff">
+<header class="has-topbar header">
+    <i class="back" onclick="history.go(-1);"></i>设置
+</header>
+<div class="h44"></div>
+<ul class="links pad-lr10">
+    <li class="tou-wrap"><a href="javascript:;"><span>头像</span><i class="link"></i><img src="images/b.png" alt="" class="tous fr"></a></li>
+    <li><a href="修改手机号1.html"><span>手机号码</span><i class="link"></i><span style="float: right;">185****2927</span></a></li>
+    <li class="mb16"><a href="银行卡-无.html"><span>银行卡</span><i class="link"></i><span></span></a></li>
+    <li class="login-wrap"><input type="button" value="退出系统" class="login-btn"></li>
+</ul>
+<p class="ceng"></p>
+<ul class="ce-alert bg-fff">
+    <li class="tou-txt" style="border-bottom: .2rem solid #ECECEC;">从相册中选择</li>
+    <li class="tou-btn">取消</li>
+</ul>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.tou-wrap').click(function(){
+        $('.ceng').show();
+        $('.ce-alert').show();
+    });
+    $('.tou-btn').click(function(){
+        $('.ceng').hide();
+        $('.ce-alert').hide();
+    });
+</script>
+</html>

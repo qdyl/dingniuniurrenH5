@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body class="bg-fff">
+<header class="has-topbar header">
+    <i class="back" onclick="history.go(-1);"></i>添加银行卡
+</header>
+<div class="h44 mb16"></div>
+<ul class="login-wrap pad-lr10">
+    <li class="mb13">
+        <span>开户行</span>
+        <select name="" id="">
+            <option value="">请选择您的开户行</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+    </li>
+    <li class="mb13"><span>银行卡号</span><input type="text" placeholder="请输入您的银行卡号"></li>
+    <li class="mb13"><span>真实姓名</span><input type="text" placeholder="请输入您的真实姓名"></li>
+    <li class="mb13"><span>手机号</span><input type="text" placeholder="请输入您的银行预留手机号"></li>
+    <li class="mb24">
+        <span>验证码</span>
+        <div class="fl over ma-wrap">
+            <input type="text" placeholder="请输入您的短信验证码" style="width: 60%;border: 0;padding-left: 0;float: left;"><input type="button" value="获取验证码" class="ma">
+        </div>
+    </li>
+    <li><input type="button" class="login-btn" value="确定" onclick="window.location.href='银行卡.html'"></li>
+</ul>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.ma').click(function(){
+        var i = 60;
+        $(this).val(i+'s后重新发送');
+        $(this).addClass('hover').attr('disabled',true);
+        var timer = setInterval(function(){
+            i--;
+            $('.ma').val(i+'s后重新发送');
+            if(i===0){
+                clearInterval(timer);
+                $('.ma').removeClass('hover').val('重新发送').removeAttr('disabled');
+            }
+        },1000);
+    });
+</script>
+</html>

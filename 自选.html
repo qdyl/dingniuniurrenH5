@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+<header class="has-topbar header" style="text-align: left">
+    <div class="pad-lr10" style="margin-top: .4rem;">
+        <div class="search-box" style="width: 96%;">
+            <input type="text" placeholder="请输入股票代码/名称//拼音" class="search fl">
+            <i class="closes" style="display: none;"></i>
+            <div class="clear"></div>
+        </div>
+    </div>
+</header>
+<div class="h44"></div>
+<!--自选-无-->
+<div class="bg-fff" style="padding: 11rem 0;display: none;">
+    <div class="no" style="margin-top: 0;"><img src="images/t.png" alt=""></div>
+    <p class="no-news">呃，还没有添加自选股</p>
+</div>
+<!--自选-->
+<div>
+    <div class="pad-lr10 bg-fff mb8 close-wrap">
+        <div class="gu-code over"><span class="mr8">东阿阿胶</span><span class="col-999999">000423</span><i class="close fr" style="margin-top: 1.2rem;"></i></div>
+        <div class="over pad-tb6">
+            <ul class="gu-lists fl">
+                <li class="gu-title"><span>现价</span><span>涨跌幅</span></li>
+                <li class="gus-names"><span>46.17</span><span class="col-FF0000">+0.15%</span></li>
+            </ul>
+            <input type="button" value="创建策略" class="fr ce-btn" onclick=window.location.href='创建策略.html'>
+        </div>
+    </div>
+    <div class="pad-lr10 bg-fff mb8 close-wrap">
+        <div class="gu-code over"><span class="mr8">东阿阿胶</span><span class="col-999999">000423</span><i class="close fr" style="margin-top: 1.2rem;"></i></div>
+        <div class="over pad-tb6">
+            <ul class="gu-lists fl">
+                <li class="gu-title"><span>现价</span><span>涨跌幅</span></li>
+                <li class="gus-names"><span>46.17</span><span class="col-31C230">-0.15%</span></li>
+            </ul>
+            <input type="button" value="创建策略" class="fr ce-btn" onclick=window.location.href='创建策略.html'>
+        </div>
+    </div>
+</div>
+<div class="h100"></div>
+<ul class="footer over bg-fff">
+    <li><a href="index.html" class="index-hui">首页</a></li>
+    <li><a href="自选.html" class="hover option-hui">自选</a></li>
+    <li><a href="策略.html" class="ce-hui">策略</a></li>
+    <li><a href="牛股.html" class="niu-hui">牛股</a></li>
+    <li><a href="个人中心.html" class="per-hui">个人中心</a></li>
+</ul>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    //搜索股票
+    $('.search').keyup(function(){
+        $('.search-list').show();
+        $('.closes').show();
+        if($(this).val()==''){
+            $('.search-list').hide();
+            $('.closes').hide();
+        }
+    });
+    $('.closes').click(function(){
+        $('.search').val('');
+        if($('.search').val()==''){
+            $(this).hide();
+            $('.search-list').hide();
+        }
+    });
+    $('.close-wrap').on('click','.close',function(){
+        $(this).parent().parent().remove();
+    });
+
+</script>
+
+</html>

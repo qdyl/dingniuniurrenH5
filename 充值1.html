@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body class="bg-fff">
+<header class="has-topbar header">
+    <i class="back" onclick="history.go(-1);"></i>充值
+</header>
+<div class="h44 mb13"></div>
+<section class="pad-lr10">
+    <div class="cz-money mb15"><span class="mr10">充值金额</span><input type="text" placeholder="请输入充值金额" class="cz-num"></div>
+    <ul class="cz-list over mb16">
+        <li class="hover">5000</li>
+        <li>10000</li>
+        <li>20000</li>
+        <li>30000</li>
+        <li>50000</li>
+        <li>80000</li>
+    </ul>
+    <div class="login-wrap">
+        <input type="button" value="立即充值" class="login-btn" style="background: #FF0000;" onclick="window.location.href='充值2.html'">
+    </div>
+</section>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.cz-list li').click(function(){
+        $(this).addClass('hover').siblings('li').removeClass('hover');
+        $('.cz-num').val($(this).text());
+    });
+</script>
+</html>

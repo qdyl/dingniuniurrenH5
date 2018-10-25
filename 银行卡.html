@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>鼎牛牛人汇</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iphoneX.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body class="bg-fff">
+<header class="has-topbar header">
+    <i class="back" onclick="history.go(-1);"></i>银行卡
+</header>
+<div class="h44 mb16"></div>
+<div class="pad-lr10">
+    <ul class="pad8 bank-wrap">
+        <li class="over mb8"><img src="images/n.png" alt="" class="bank-tu fl mr8"><span class="fl bank-name">工商银行</span><i class="close fr"></i></li>
+        <li class="bank-num">6217 0000 0000 0000 000</li>
+    </ul>
+</div>
+<p class="ceng"></p>
+<ul class="center jie-alert bg-fff">
+    <li class="desc">解绑银行卡</li>
+    <li class="btns over"><input type="button" value="确定" style="color: #0479C7;" class="que"><input type="button" value="取消" class="qu"></li>
+</ul>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $('.close').click(function(){
+        $('.jie-alert').show();
+        $('.ceng').show();
+    });
+    $('.que').click(function(){
+        $('.jie-alert').hide();
+        $('.ceng').hide();
+        $('.bank-wrap').remove();
+    });
+    $('.qu').click(function(){
+        $('.jie-alert').hide();
+        $('.ceng').hide();
+    });
+</script>
+</html>
